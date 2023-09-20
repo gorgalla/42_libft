@@ -1,30 +1,42 @@
-void    *ft_bzero(void *dest, unsigned int n)
-{
-    unsigned char  *str = (unsigned char *)dest;
-    unsigned int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/19 13:48:13 by gorgalla          #+#    #+#             */
+/*   Updated: 2023/09/20 15:28:31 by gorgalla         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while (i <= n)
-    {
-        *str = '\0';
-        str++;
-        i++;
-    }
-    
+#include "libft.h"
+
+void	ft_bzero(void *dest, size_t n)
+{
+	size_t	i;
+	char	*charr;
+
+	charr = dest;
+	i = 0;
+	while (i < n)
+	{
+		charr[i] = 0;
+		i++;
+	}
 }
 /*
 #include <stdio.h>
-int main(void)
+int	main(void)
 {
-    char buffer[10];
-    ft_bzero(buffer, sizeof(buffer));
-    for (int i = 0; i < sizeof(buffer); i++) {
-        if (buffer[i] != '\0') {
-            printf("El búfer no está relleno con bytes nulos.\n");
-            return 1;
-        }
-    }
+	unsigned char buffer[10];
+	int i;
 
-    printf("El búfer está relleno con bytes nulos.\n");
-    return 0;
+	ft_bzero(buffer, sizeof(buffer));
+	for (i = 0; i < 10; i++)
+	{
+		if (buffer[i] == '0')
+			printf("Todo ok");
+	}
+	return (0);
 }*/

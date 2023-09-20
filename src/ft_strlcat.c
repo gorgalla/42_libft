@@ -1,20 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   strlcat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 14:46:09 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/20 15:43:20 by gorgalla         ###   ########.fr       */
+/*   Created: 2023/09/20 16:11:55 by gorgalla          #+#    #+#             */
+/*   Updated: 2023/09/20 16:18:51 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <libft.h>
 
-int	ft_isalpha(char c)
+#include "libft.h"
+
+size_t	ft_strlcat(char *dest, const char *src, size_t sz)
 {
-	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
-		return (1);
+	size_t	i;
+	size_t	j;
+	size_t	k;
+
+	i = 0;
+	j = 0;
+	k = 0;
+	while (dest[i] != '\0')
+		i++;
+	while (src[k] != '\0')
+		k++;
+	if (sz <= i)
+		k += sz;
 	else
-		return (0);
+		k += i;
+	while (src[j] != '\0' && i + 1 < sz)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	return (k);
 }
