@@ -9,13 +9,25 @@
 /*   Updated: 2023/09/19 15:11:18 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-char	ft_strchr(char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-	int	i;
+	int i;
+	int flag;
 
+	flag = 0;
 	i = 0;
-	while (str[i] == c)
+	while (((char*)str)[i] != '\0' && flag == 0)
+	{
+		if (((char*)str)[i] == c)
+		{
+			return ((char*)&str[i]);
+			flag = 1;
+		}
 		i++;
-	return (c);
+	}
+	if (c == '\0')
+		return ((char*)&str[i]);
+	return (NULL);
 }

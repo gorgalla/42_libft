@@ -9,3 +9,14 @@
 /*   Updated: 2023/09/21 13:42:28 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
+{
+	int i;
+
+	i = 0;
+	if (s != NULL)
+		while (s[i])
+			write(fd, &s[i++], 1);
+}

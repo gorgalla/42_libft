@@ -9,13 +9,14 @@
 /*   Updated: 2023/09/19 15:14:21 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int	ft_strncmp(char *str1, char *str2, int n)
+int	ft_strncmp(char *str1, char *str2, size_t n)
 {
-	int	size1;
-	int	size2;
-	int	i;
-	int	j;
+	size_t	size1;
+	size_t	size2;
+	size_t	i;
+	size_t	j;
 
 	size1 = 0;
 	size2 = 0;

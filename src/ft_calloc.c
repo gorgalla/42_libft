@@ -9,3 +9,18 @@
 /*   Updated: 2023/09/21 13:35:17 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
+
+void    *ft_calloc(size_t x, size_t size)
+{
+    void    *result;
+
+    result = malloc(x * size);
+    if (!result)
+        return (NULL);
+    else
+    {
+        ft_bzero(result, (x * size));
+        return (result);
+    }
+}
