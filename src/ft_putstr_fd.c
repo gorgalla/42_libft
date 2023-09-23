@@ -6,17 +6,19 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:42:25 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/21 13:42:28 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/23 21:40:19 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (s != NULL)
+	{
 		while (s[i])
 			write(fd, &s[i++], 1);
+	}
 }

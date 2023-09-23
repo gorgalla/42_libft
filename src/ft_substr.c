@@ -6,7 +6,7 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:37:32 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/21 13:37:53 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/23 22:02:47 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -18,7 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	str = NULL;
-	if (!s || (!(str = malloc(len + 1))))
+	str = malloc;
+	if (!s || (!(str(len + 1))))
 		return (NULL);
 	if (start > ft_strlen(s))
 	{

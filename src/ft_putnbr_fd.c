@@ -6,14 +6,14 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:44:52 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/21 13:44:56 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/23 21:39:08 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long int copia;
+	long int	copia;
 
 	copia = n;
 	if (copia < 0)

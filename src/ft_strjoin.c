@@ -6,7 +6,7 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:38:29 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/21 13:38:35 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/23 21:58:56 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -23,7 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	a = ft_strlen(s1);
 	b = ft_strlen(s2);
 	i = 0;
-	if (!(str = malloc((a + b + 1))) || !str)
+	str = malloc;
+	if (!(str((a + b + 1))) || !str)
 		return (NULL);
 	while (a--)
 	{

@@ -6,12 +6,12 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:39:38 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/21 13:39:43 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/23 21:41:38 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static int		numstring(char const *s1, char c)
+static	int	numstring(char const *s1, char c)
 {
 	int	comp;
 	int	cles;
@@ -34,7 +34,7 @@ static int		numstring(char const *s1, char c)
 	return (comp);
 }
 
-static int		numchar(char const *s2, char c, int i)
+static int	numchar(char const *s2, char c, int i)
 {
 	int	lenght;
 
@@ -47,7 +47,7 @@ static int		numchar(char const *s2, char c, int i)
 	return (lenght);
 }
 
-static char		**freee(char const **dst, int j)
+static char	**freee(char const **dst, int j)
 {
 	while (j > 0)
 	{
@@ -58,7 +58,7 @@ static char		**freee(char const **dst, int j)
 	return (NULL);
 }
 
-static char		**affect(char const *s, char **dst, char c, int l)
+static char	**affect(char const *s, char **dst, char c, int l)
 {
 	int	i;
 	int	j;
@@ -83,7 +83,7 @@ static char		**affect(char const *s, char **dst, char c, int l)
 	return (dst);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**dst;
 	int		l;

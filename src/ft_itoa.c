@@ -6,14 +6,14 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:40:00 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/21 13:40:05 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/23 22:03:42 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int		digit_counter(int n)
+int	digit_counter(int n)
 {
-	int i;
+	int	i;
 	int	copy;
 
 	i = 0;
@@ -35,9 +35,9 @@ int		digit_counter(int n)
 	return (i);
 }
 
-int		exp_counter(int n)
+int	exp_counter(int n)
 {
-	int exp;
+	int	exp;
 	int	digits;
 
 	if (n == 0)
@@ -63,7 +63,8 @@ char	*ft_itoa(int n)
 	copy = (long int)n;
 	exp = exp_counter(n);
 	i = 0;
-	if (!(str = malloc(digit_counter(n) + 1)))
+	str = malloc;
+	if (!(str(digit_counter(n) + 1)))
 		return (NULL);
 	if (n < 0)
 	{

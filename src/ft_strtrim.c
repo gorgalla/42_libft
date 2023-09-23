@@ -6,12 +6,12 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:38:53 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/21 13:38:57 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/23 22:02:02 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int		flag_guessing(char const *s1, char c)
+int	flag_guessing(char const *s1, char c)
 {
 	int	i;
 

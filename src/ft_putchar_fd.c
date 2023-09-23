@@ -6,12 +6,12 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:42:01 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/21 13:42:09 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/23 21:37:32 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void    ft_putchar(char c, int fd)
+void	ft_putchar(char c, int fd)
 {
-    write(fd, &c, 1);
+	write(fd, &c, 1);
 }
