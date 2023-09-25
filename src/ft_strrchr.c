@@ -9,15 +9,20 @@
 /*   Updated: 2023/09/19 15:15:35 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 char	ft_strrchr(char *str, int c)
 {
 	int	i;
-	int	strlen;
 
-	strlen = str;
-	i = strlen - 1;
-	while (str[i] == c)
+	i = 0;
+	while (str[i])
+		i++;
+	while (i >= 0)
+	{
+		if(str[i] == (char)c)
+			return ((char *)(str + i));
 		i--;
-	return (c);
+	}
+	return (NULL);
 }
