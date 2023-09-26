@@ -13,16 +13,19 @@
 
 char	ft_strrchr(char *str, int c)
 {
-	int	i;
+	int	l;
+	int	b;
 
-	i = 0;
-	while (str[i])
-		i++;
-	while (i >= 0)
+	b = 0;
+	l =  ft_strlen(str);
+	while (l >= 0 && b == 0)
 	{
-		if(str[i] == (char)c)
-			return ((char *)(str + i));
-		i--;
+		if (str[l] == c)
+		{
+			return ((char *)&str[l]);
+			b = 1;
+		}
+		l--;
 	}
 	return (NULL);
 }
