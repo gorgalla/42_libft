@@ -6,77 +6,56 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:40:00 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/23 22:03:42 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/26 08:46:16 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	digit_counter(int n)
+static	int	ft_get_size(int n)
 {
-	int	i;
-	int	copy;
+	int	size;
 
-	i = 0;
-	if (n == 0)
-		return (1);
-	if (n == -2147483648)
-		return (11);
-	if (n < 0)
+	size = 0;
+	if (n <= 0)
+		size++;
+	while (n != 0)
 	{
+		n = n / 10;
+		size++;
+	}
+	return (size);
+}
+
+static void	ft_fill_res(int	size, int offset, int n, char *res)
+{
+	while (size > offset)
+	{
+		res[size - 1] = n % 10 + '0';
+		n = n / 10;
+		size--;
+	}
+}
+
+char *ft_itoa(int n)
+{
+	int	offset;
+	int	size;
+	char	*res;
+
+	offset = 0;
+	size = ft_get_size(n);
+	res = (char *)malloc(sizeof(char) * size + 1);
+	if (!res)
+		return (0);
+	if  (n == -2147483648)
+	{
+		res[0] = '-';
+		res[1] = '2';
+		n = 147483648;
+		offset = 1;
 		n = -n;
-		i++;
 	}
-	copy = n;
-	while (copy > 0)
-	{
-		copy = copy / 10;
-		i++;
-	}
-	return (i);
-}
-
-int	exp_counter(int n)
-{
-	int	exp;
-	int	digits;
-
-	if (n == 0)
-		return (1);
-	if (n == -2147483648)
-		return (1000000000);
-	digits = digit_counter(n);
-	if (n < 0)
-		digits--;
-	exp = 1;
-	while (--digits)
-		exp = exp * 10;
-	return (exp);
-}
-
-char	*ft_itoa(int n)
-{
-	char		*str;
-	int			exp;
-	int			i;
-	long int	copy;
-
-	copy = (long int)n;
-	exp = exp_counter(n);
-	i = 0;
-	str = malloc;
-	if (!(str(digit_counter(n) + 1)))
-		return (NULL);
-	if (n < 0)
-	{
-		str[i++] = '-';
-		copy = -copy;
-	}
-	while (exp > 0)
-	{
-		str[i++] = (copy / exp) + 48;
-		copy = copy % exp;
-		exp = exp / 10;
-	}
-	str[i] = '\0';
-	return (str);
+	ft_fill_res(size, offset, n, res);
+	res[size] = '\0';
+	return (res);
 }
