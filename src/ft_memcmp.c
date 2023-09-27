@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcmp.c                                           :+:      :+:    :+:   */
+/*   ft_memcmp.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:20:35 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/23 21:36:16 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:36:54 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_memcmp(const void *dst, const void *str, size_t n)
+int	ft_memcmp(void *dest, const void *src, size_t n)
 {
 	unsigned char	*str2;
 	unsigned char	*dst2;
 
-	dst2 = (unsigned char *)dst;
-	str2 = (unsigned char *)str;
+	dst2 = (unsigned char *)dest;
+	str2 = (unsigned char *)src;
 	if (n)
 	{
 		while (n--)

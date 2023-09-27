@@ -6,12 +6,12 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:40:27 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/23 22:00:30 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:52:35 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;
 	char	*str;

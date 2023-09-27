@@ -6,12 +6,12 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 15:12:31 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/19 15:14:21 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:39:20 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_strncmp(char *str1, char *str2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	size1;
 	size_t	size2;
@@ -22,7 +22,7 @@ int	ft_strncmp(char *str1, char *str2, size_t n)
 	size2 = 0;
 	i = 0;
 	j = 0;
-	while (i < n && str1[i] != '\0' && str2[j] != '\0')
+	while (i < n && s1[i] != '\0' && s2[j] != '\0')
 	{
 		size1++;
 		size2++;

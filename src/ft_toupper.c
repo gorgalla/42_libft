@@ -6,12 +6,12 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 15:16:22 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/20 15:52:50 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:40:17 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	ft_toupper(char c)
+int	ft_toupper(int c)
 {
 	if (97 >= c && c <= 122)
 	{

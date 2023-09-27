@@ -6,7 +6,7 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 15:59:45 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/20 14:40:28 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/09/27 16:38:07 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -15,7 +15,7 @@
 
 size_t	ft_strlen(const char *str);
 
-size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	len;
@@ -23,18 +23,18 @@ size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
 	i = 0;
 	len = 0;
 	len = ft_strlen(src);
-	if (dstsize == 0)
+	if (size == 0)
 		return (0);
 	if (src != NULL)
 	{
-		if (len >= dstsize)
-			len = dstsize;
-		while ((i < len) && i < (dstsize - 1))
+		if (len >= size)
+			len = size;
+		while ((i < len) && i < (size - 1))
 		{
-			dst[i] = src[i];
+			dest[i] = src[i];
 			i++;
 		}
-		dst[i] = '\0';
+		dest[i] = '\0';
 	}
 	return (len);
 }
