@@ -12,7 +12,7 @@
 
 char	ft_tolower(char c)
 {
-	if (65 >= c && c <= 90)
+	if ('A' <= c && c <= 'Z')
 	{
 		return (c + 32);
 	}

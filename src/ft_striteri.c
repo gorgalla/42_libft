@@ -11,30 +11,16 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	char	*str;
-	int		a;
-	int		b;
-	int		i;
+	unsigned int	i;
 
-	if (!s1 || !s2)
-		return (NULL);
-	a = ft_strlen(s1);
-	b = ft_strlen(s2);
+	if (!s || !f)
+		return ;
 	i = 0;
-	str = malloc;
-	if (!(str((a + b + 1))) || !str)
-		return (NULL);
-	while (a--)
+	while (s[i])
 	{
-		str[i] = s1[i];
+		f(i, s + i);
 		i++;
 	}
-	a = i;
-	i = 0;
-	while (b--)
-		str[a++] = s2[i++];
-	str[a] = '\0';
-	return (str);
 }

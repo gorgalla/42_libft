@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -9,34 +9,22 @@
 /*   Updated: 2023/09/27 16:38:07 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
-
-size_t	ft_strlen(const char *str);
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	len;
 
+	if (!size)
+		return (ft_strlen(src));
 	i = 0;
-	len = 0;
-	len = ft_strlen(src);
-	if (size == 0)
-		return (0);
-	if (src != NULL)
+	while (src[i] && (i < size - 1))
 	{
-		if (len >= size)
-			len = size;
-		while ((i < len) && i < (size - 1))
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
+		dest[i] = src[i];
+		i++;
 	}
-	return (len);
+	dest[i] = 0;
+	return (ft_strlen(src));
 }
 /*
 int	main(void)

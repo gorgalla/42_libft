@@ -13,7 +13,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *pointer;
+	unsigned char	*pointer;
 
 	pointer = (unsigned char *)s;
 	c = (unsigned char)c;

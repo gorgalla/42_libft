@@ -24,5 +24,5 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (c == 0)
 		return ((char *)s);
-	return  (ptr);
+	return (ptr);
 }
