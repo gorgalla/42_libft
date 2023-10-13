@@ -54,6 +54,12 @@ char	*ft_itoa(int n)
 		n = 147483648;
 		offset = 2;
 	}
+	else if (n < 0)
+	{
+		res[0] = '-';
+		n = -n;
+		offset = 1;
+	}
 	ft_fill_res(size, offset, n, res);
 	res[size] = '\0';
 	return (res);
