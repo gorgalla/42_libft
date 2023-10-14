@@ -6,7 +6,7 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 13:40:00 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/26 08:46:16 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/10/14 14:02:56 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -39,8 +39,8 @@ static void	ft_fill_res(int size, int offset, int n, char *res)
 char	*ft_itoa(int n)
 {
 	char	*res;
-	int	offset;
-	int	size;
+	int		offset;
+	int		size;
 
 	offset = 0;
 	size = ft_get_size(n);

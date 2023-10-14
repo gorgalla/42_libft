@@ -6,15 +6,15 @@
 /*   By: gorgalla <gorgalla@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 15:15:50 by gorgalla          #+#    #+#             */
-/*   Updated: 2023/09/19 15:16:09 by gorgalla         ###   ########.fr       */
+/*   Updated: 2023/10/14 14:14:56 by gorgalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_tolower(char c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-	if ('A' <= c && c <= 'Z')
-	{
-		return (c + 32);
-	}
+	if (c >= 'A' && c <= 'Z')
+		c = c + 32;
 	return (c);
 }
